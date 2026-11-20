@@ -56,6 +56,13 @@ h1{font-size:clamp(43px,6.3vw,82px);letter-spacing:-.065em;line-height:1.06;marg
 .after a:hover{color:#fff}
 footer{border-top:1px solid rgba(80,157,126,.15);padding-top:20px;color:#77958a;font:11px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.06em}
 footer span:last-child{color:#9db9ae}
+.cell-core:after{content:"";position:absolute;z-index:2;left:8px;right:8px;top:0;height:2px;background:linear-gradient(90deg,transparent,rgba(125,255,205,.95),transparent);box-shadow:0 0 17px rgba(0,230,161,.7);animation:scan 5s ease-in-out infinite;pointer-events:none}
+.maintenance-emblem{position:absolute;z-index:3;left:50%;top:50%;width:98px;height:98px;transform:translate(-50%,-50%);display:grid;place-items:center;border:1px solid rgba(0,230,161,.58);border-radius:50%;background:radial-gradient(circle at 35% 25%,#143a2f,#071610 77%);box-shadow:0 0 0 9px rgba(0,230,161,.065),0 0 42px rgba(0,230,161,.34),inset 0 0 25px rgba(0,230,161,.1)}
+.maintenance-emblem:before{content:"";position:absolute;inset:-12px;border:2px dashed rgba(117,248,191,.65);border-radius:50%;animation:rotate 24s linear infinite}
+.maintenance-emblem svg{width:51px;height:51px;filter:drop-shadow(0 0 9px rgba(0,230,161,.55));transform:rotate(12deg)}
+.maintenance-marker{position:absolute;z-index:4;right:3px;top:20px;display:flex;align-items:center;gap:7px;padding:8px 11px;color:#ffc875;border:1px solid rgba(255,200,117,.34);border-radius:6px;background:rgba(21,27,20,.9);font:700 9px ui-monospace,SFMono-Regular,Consolas,monospace;letter-spacing:.12em;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.maintenance-marker:before{content:"";width:6px;height:6px;border-radius:50%;background:#ffc875;box-shadow:0 0 9px rgba(255,200,117,.7);animation:blink 2.5s infinite}
+@keyframes scan{0%,100%{top:7%;opacity:0}15%,85%{opacity:1}50%{top:93%}}
 @keyframes rotate{to{transform:rotate(360deg)}}
 @keyframes float{0%,100%{transform:translateY(0) rotate(-12deg)}50%{transform:translateY(-12px) rotate(-9deg)}}
 @keyframes blink{50%{opacity:.35}}
@@ -82,7 +89,15 @@ footer span:last-child{color:#9db9ae}
   <div class="art" aria-hidden="true">
     <div class="halo"></div>
     <div class="core-outline"></div><div class="core-outline two"></div>
-    <div class="cell-core"><div class="cells" id="cells"></div></div>
+    <div class="cell-core">
+      <div class="cells" id="cells"></div>
+      <div class="maintenance-emblem">
+        <svg viewBox="0 0 64 64" fill="none" stroke="#83FFD0" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M37.5 12a17 17 0 0 0-20.8 21.1L8 41.8a6.6 6.6 0 0 0 9.3 9.3l8.7-8.7A17 17 0 0 0 47 21.5l-9.8 9.8-8-2.2-2.2-8L37.5 12z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="maintenance-marker">SERVICE MODE</div>
     <span class="orbit-dot"></span><span class="orbit-dot b"></span>
   </div>
   <div class="eyebrow" id="eyebrow">Service Infrastructure Update</div>
