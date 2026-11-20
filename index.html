@@ -75,7 +75,7 @@ footer span:last-child{color:#9db9ae}
     </div>
     <div class="wordmark"><strong>NERVOS</strong><small>COMMON KNOWLEDGE BASE</small></div>
   </div>
-  <div class="header-label">CKB // SYSTEM MAINTENANCE</div>
+  <div class="header-label">SYSTEM MAINTENANCE</div>
 </header>
 <main>
   <div class="art" aria-hidden="true">
@@ -84,7 +84,7 @@ footer span:last-child{color:#9db9ae}
     <div class="cell-core"><div class="cells" id="cells"></div></div>
     <span class="orbit-dot"></span><span class="orbit-dot b"></span>
   </div>
-  <div class="eyebrow" id="eyebrow">CKB Infrastructure Update</div>
+  <div class="eyebrow" id="eyebrow">Service Infrastructure Update</div>
   <h1 id="headline">Evolving the network.<br><span class="accent">Back soon.</span></h1>
   <p class="description" id="description">We're performing scheduled maintenance to make this service more reliable. Thank you for your patience while we work behind the scenes.</p>
   <div class="status" role="status" aria-live="polite">
@@ -112,7 +112,7 @@ if (CONFIG.estimatedReturn) $('return-time').textContent = CONFIG.estimatedRetur
 const zh = CONFIG.bilingual && /^zh\b/i.test(navigator.language || '');
 if (zh) {
   document.documentElement.lang = 'zh-CN';
-  $('eyebrow').textContent = 'CKB 基础设施升级';
+  $('eyebrow').textContent = '服务维护升级';
   $('headline').replaceChildren(document.createTextNode('网络持续进化，'),document.createElement('br'));
   const accent = document.createElement('span');accent.className='accent';accent.textContent='即将恢复。';$('headline').append(accent);
   $('description').textContent = '我们正在进行计划维护，以提供更稳定、可靠的服务。感谢您的理解与耐心。';
